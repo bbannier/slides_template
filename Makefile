@@ -1,9 +1,5 @@
-all : slides.pdf
-
 %.pdf : %.tex
 	pdflatex $<
 
-%.tex : %.txt header.tex
-	breakdown < $< > $@
-	sed -ie 's/\usepackage{verbdef}/\input{header}/' $@
-
+%.tex : %.pdc
+	pandoc -t json $< | pandoc_filter_beamer | pandoc -f json -t latex --template=beamer.template -o $@

@@ -1,0 +1,66 @@
+\documentclass{beamer}
+
+\usepackage[utf8x]{inputenc}
+\usepackage{listings}
+\usepackage{verbdef}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{helvet}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes}
+\tikzstyle{every picture}+=[remember picture]
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[page number]
+%\usetheme{default}
+%\usetheme{Warsaw}
+%\usefonttheme{serif}
+%\usecolortheme{dove}
+%\usecolortheme{wolverine}
+%\usecolortheme{crane}
+%\usecolortheme{fly}
+%\setbeamercolor{normal text}{fg=white,bg=black}
+
+$if(tables)$
+\usepackage{array}
+% This is needed because raggedright in table elements redefines \\:
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\let\PBS=\PreserveBackslash
+$endif$
+$if(strikeout)$
+\usepackage[normalem]{ulem}
+$endif$
+$if(subscript)$
+\newcommand{\textsubscr}[1]{\ensuremath{_{\scriptsize\textrm{#1}}}}
+$endif$
+$if(links)$
+\usepackage[breaklinks=true]{hyperref}
+$endif$
+
+$if(url)$
+\usepackage{url}
+$endif$
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+$if(title)$
+\title{$title$}
+$endif$
+\author{$for(author)$$author$$sep$\\$endfor$}
+$if(date)$
+\date{$date$}
+$endif$
+
+\begin{document}
+\begin{frame}{}
+  \titlepage
+
+$body$
+
+\end{frame}
+\end{document}
