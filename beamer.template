@@ -48,6 +48,8 @@ $for(header-includes)$
 $header-includes$
 $endfor$
 
+\usepackage{microtype}
+
 $if(title)$
 \title{$title$}
 $endif$
