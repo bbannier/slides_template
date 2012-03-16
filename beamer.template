@@ -8,6 +8,7 @@
 \usepackage{textcomp}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage[multidot]{grffile}
 \usepackage{helvet}
 \usepackage{tikz}
 \usetikzlibrary{arrows,shapes}
