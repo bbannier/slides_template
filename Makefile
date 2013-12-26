@@ -11,3 +11,5 @@ SHELL := bash
 	  -H <(echo '\setbeamertemplate{navigation symbols}{}\setbeamertemplate{footline}[page number]') \
 	  --highlight-style=tango \
 	  --indented-code-class=Cpp,numberLines
+
+all: slides.pdf
