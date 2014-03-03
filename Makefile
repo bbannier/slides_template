@@ -11,6 +11,7 @@ SHELL := bash
 	  -H <(echo '\setbeamertemplate{navigation symbols}{}\setbeamertemplate{footline}[page number]') \
 	  -H <(echo '\usepackage{cmbright}') \
 	  -H <(echo '\usepackage{mathpazo}') \
+	  -H <(echo '\usepackage[iso,american]{isodate}') \
 	  --highlight-style=tango \
 	  --indented-code-class=Cpp,numberLines
 
