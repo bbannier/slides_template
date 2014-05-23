@@ -8,7 +8,7 @@ SHELL := bash
 	  -V graphics \
 	  $(OPT_DRAFT) \
 	  -t beamer \
-	  -H <(echo '\setbeamertemplate{navigation symbols}{}\setbeamertemplate{footline}[page number]') \
+	  -H <(echo '\setbeamertemplate{navigation symbols}{}\setbeamertemplate{footline}[frame number]') \
 	  -H <(echo '\usepackage{cmbright}') \
 	  -H <(echo '\usepackage{mathpazo}') \
 	  -H <(echo '\usepackage[iso,american]{isodate}') \
