@@ -6,7 +6,7 @@ OPT_DRAFT := -V fontsize:draft
 slides.pdf: slides.pdc
 	pandoc -o $@ $< \
 		$(OPT_DRAFT) \
-		--latex-engine=xelatex \
+		--pdf-engine=xelatex \
 	  -V colortheme:whale \
 	  -t beamer \
 	  -H <(echo '\usepackage[iso,american]{isodate}') \
