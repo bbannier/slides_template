@@ -20,7 +20,7 @@ slides.pdf: slides.pdc
 	  -H <(echo '\usepackage[]{microtype}') \
 	  -H <(echo '\setsansfont[Path= ./fonts/, Mapping={tex-text}, ItalicFont=EBGaramond12-Italic.ttf,BoldItalicFont=EBGaramond12-Italic.ttf]{EBGaramond-Regular.ttf}') \
 	  -H <(echo '\setromanfont[Path= ./fonts/, Mapping={tex-text}, ItalicFont=EBGaramond12-Italic.ttf,BoldItalicFont=EBGaramond12-Italic.ttf]{EBGaramond-Regular.ttf}') \
-	  -H <(echo '\setmonofont[Path= ./fonts/, Mapping={tex-text}, ItalicFont=CamingoCode-Italic.ttf,BoldItalicFont=CamingoCode-BoldItalic.ttf,BoldFont=CamingoCode-Bold]{CamingoCode-Regular.ttf}') \
+	  -H <(echo '\setmonofont[Path= ./fonts/, Mapping={tex-text}, ItalicFont=iosevka-italic.ttc,BoldItalicFont=iosevka-bolditalic.ttc,BoldFont=iosevka-bold.ttc]{iosevka-regular.ttc}') \
 	  -H <(echo '\definecolor{links}{HTML}{646464}') \
 	  -H <(echo "\subtitle{}") \
 	  -H <(echo '\hypersetup{colorlinks,linkcolor=,urlcolor=links}') \
