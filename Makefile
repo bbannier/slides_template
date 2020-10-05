@@ -1,28 +1,20 @@
 SHELL := bash
 
-# uncomment to enable draft mode
-OPT_DRAFT := -V fontsize:draft
-
-slides.pdf: slides.pdc
+slides.pdf: slides.md
 	pandoc -o $@ $< \
-		$(OPT_DRAFT) \
 		--pdf-engine=xelatex \
-	  -V colortheme:whale \
 	  -t beamer \
 	  -H <(echo '\usepackage[iso,american]{isodate}') \
 	  -H <(echo '\setbeamertemplate{navigation symbols}{}') \
 	  -H <(echo '\setbeamertemplate{footline}[page number]') \
 	  -H <(echo '\setbeamertemplate{items}[circle]') \
-	  -H <(echo '\usefonttheme{structurebold}') \
-	  -V fontsize:xcolor=dvipsnames \
-	  -H <(echo '\usecolortheme[named=MidnightBlue]{structure}') \
+	  -H <(echo '\usepackage{appendix}') \
 	  -H <(echo '\usepackage[]{pxfonts}') \
 	  -H <(echo '\usepackage[]{microtype}') \
 	  -H <(echo '\setsansfont[Path= ./fonts/, Mapping={tex-text}, ItalicFont=EBGaramond12-Italic.ttf,BoldItalicFont=EBGaramond12-Italic.ttf]{EBGaramond-Regular.ttf}') \
 	  -H <(echo '\setromanfont[Path= ./fonts/, Mapping={tex-text}, ItalicFont=EBGaramond12-Italic.ttf,BoldItalicFont=EBGaramond12-Italic.ttf]{EBGaramond-Regular.ttf}') \
 	  -H <(echo '\setmonofont[Path= ./fonts/, Mapping={tex-text}, ItalicFont=iosevka-italic.ttc,BoldItalicFont=iosevka-bolditalic.ttc,BoldFont=iosevka-bold.ttc]{iosevka-regular.ttc}') \
 	  -H <(echo '\definecolor{links}{HTML}{646464}') \
-	  -H <(echo "\subtitle{}") \
 	  -H <(echo '\hypersetup{colorlinks,linkcolor=,urlcolor=links}') \
 	  --highlight-style=tango \
 	  --highlight-style=zenburn \
